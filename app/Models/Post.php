@@ -46,4 +46,14 @@ class Post extends Model
         $this->views++;
         return $this->save();
     }
+
+    public function getNextAttribute()
+    {
+        return static::where('id', '>', $this->id)->orderBy('id', 'asc')->first();
+    }
+
+    public  function getPreviousAttribute()
+    {
+        return static::where('id', '<', $this->id)->orderBy('id', 'desc')->first();
+    }
 }

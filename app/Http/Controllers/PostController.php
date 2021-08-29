@@ -27,7 +27,6 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-
         $rules = $request->validate([
             'title' => 'required',
             'slug' => 'required',

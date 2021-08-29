@@ -76,13 +76,15 @@
                                 <div class="col-lg-6">
                                     <div class="blog-list-widget">
                                         <div class="list-group">
-                                            <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            @if (isset($post->previous))
+                                            <a href="{{ route('post', $post->previous->slug) }}" class="list-group-item list-group-item-action flex-column align-items-start">
                                                 <div class="w-100 justify-content-between text-right">
-                                                    <img src="{{ asset('users/upload/tech_menu_19.jpg') }}" alt="" class="img-fluid float-right">
-                                                    <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
+                                                    <img src="{{ Storage::disk('local')->url($post->previous->featuredimage) }}" alt="" class="img-fluid float-right">
+                                                    <h5 class="mb-1">{{ $post->previous->title }}</h5>
                                                     <small>Prev Post</small>
                                                 </div>
                                             </a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div><!-- end col -->
@@ -90,13 +92,15 @@
                                 <div class="col-lg-6">
                                     <div class="blog-list-widget">
                                         <div class="list-group">
-                                            <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
-                                                <div class="w-100 justify-content-between">
-                                                    <img src="{{ asset('users/upload/tech_menu_20.jpg') }}" alt="" class="img-fluid float-left">
-                                                    <h5 class="mb-1">Let's make an introduction to the glorious world of history</h5>
+                                            @if (isset($post->next))
+                                            <a href="{{ route('post', $post->next->slug) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="w-100 justify-content-between text-left">
+                                                    <img src="{{ Storage::disk('local')->url($post->next->featuredimage) }}" alt="" class="img-fluid float-left">
+                                                    <h5 class="mb-1">{{ $post->next->title }}</h5>
                                                     <small>Next Post</small>
                                                 </div>
                                             </a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div><!-- end col -->
@@ -108,13 +112,15 @@
                         <div class="custombox authorbox clearfix">
                             <h4 class="small-title">About author</h4>
                             <div class="row">
+                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                                    <img src="{{ asset('users/upload/author.jpg') }}" alt="" class="img-fluid rounded-circle">
+
+                                    <img src="{{ Auth::user()->profile_photo_url }}" alt="" class="img-fluid rounded-circle">
                                 </div><!-- end col -->
 
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <h4><a href="#">Jessica</a></h4>
-                                    <p>Quisque sed tristique felis. Lorem <a href="#">visit my website</a> amet, consectetur adipiscing elit. Phasellus quis mi auctor, tincidunt nisl eget, finibus odio. Duis tempus elit quis risus congue feugiat. Thanks for stop Tech Blog!</p>
+                                    <h4><a href="#">{{ Auth::user()->name }}</a></h4>
+                                    <p>{{ Auth::user()->about }}</p>
 
                                     <div class="topsocial">
                                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -126,6 +132,7 @@
                                     </div><!-- end social -->
 
                                 </div><!-- end col -->
+                                @endif
                             </div><!-- end row -->
                         </div><!-- end author-box -->
 
@@ -148,24 +155,6 @@
                                             <h4><a href="tech-single.html" title="">We are guests of ABC Design Studio</a></h4>
                                             <small><a href="blog-category-01.html" title="">Trends</a></small>
                                             <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
-                                        </div><!-- end meta -->
-                                    </div><!-- end blog-box -->
-                                </div><!-- end col -->
-
-                                <div class="col-lg-6">
-                                    <div class="blog-box">
-                                        <div class="post-media">
-                                            <a href="tech-single.html" title="">
-                                                <img src="{{ asset('users/upload/tech_menu_06.jpg') }}" alt="" class="img-fluid">
-                                                <div class="hovereffect">
-                                                    <span class=""></span>
-                                                </div><!-- end hover -->
-                                            </a>
-                                        </div><!-- end media -->
-                                        <div class="blog-meta">
-                                            <h4><a href="tech-single.html" title="">Nostalgia at work with family</a></h4>
-                                            <small><a href="blog-category-01.html" title="">News</a></small>
-                                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
                                 </div><!-- end col -->
