@@ -37,19 +37,21 @@ class HomeController extends Controller
         //     Cookie::set('$post->id', '1', 60);
         //     $post->incrementReadCount();
         // }
-        $socialShare = ShareFacade::currentPage()
-            ->facebook()
-            ->twitter()
-            ->reddit()
-            ->linkedin()
-            ->whatsapp()
-            ->telegram();
-
-        $share = 'http://127.0.0.1:8000';
-
-        // return $share;
 
         $post->incrementReadCount();
+        // $posts = Post::whereSlug($post)->first();
+
+        // $related_category_ids = $posts->categories()->pluck('categories.id');
+
+        // // get the related post of the categories $related_category_ids
+        // $related_posts = Post::whereHas('categories', function ($q) use ($related_category_ids) {
+        //     $q->whereIn('category_id', $related_category_ids);
+        // })
+        //     ->where('id', '<>', $posts->id)
+        //     ->take(2)
+        //     ->get();
+
+        $share = 'http://127.0.0.1:8000';
 
         return view('frontend.posts.singlepost', compact('post', 'share'));
     }

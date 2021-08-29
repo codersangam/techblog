@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -26,8 +30,6 @@ Route::get('/post/{post}', [HomeController::class, 'singlepost'])->name('post');
 Route::get('/post/category/{category}', [HomeController::class, 'postByCategory'])->name('category');
 Route::get('/post/tag/{tag}', [HomeController::class, 'postByTag'])->name('tag');
 
-// Social Share
-Route::get('/share-social', [ShareSocialController::class, 'shareSocial']);
 
 // Tag
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {

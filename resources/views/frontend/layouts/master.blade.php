@@ -15,31 +15,31 @@
 <meta name="author" content="">
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="{{ asset('users/images/favicon.ico') }}" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ asset('users/images/apple-touch-icon.png') }}">
+<link rel="shortcut icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ asset('frontend/images/apple-touch-icon.png') }}">
 
 <!-- Design fonts -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 <!-- Bootstrap core CSS -->
-<link href="{{ asset('users/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet">
 
 <!-- FontAwesome Icons core CSS -->
-<link href="{{ asset('users/css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/font-awesome.min.css') }}" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="{{ asset('users/style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/style.css') }}" rel="stylesheet">
 
 <!-- Responsive styles for this template -->
-<link href="{{ asset('users/css/responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/responsive.css') }}" rel="stylesheet">
 
 <!-- Colors for this template -->
-<link href="{{ asset('users/css/colors.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/colors.css') }}" rel="stylesheet">
 
 <!-- Version Tech CSS for this template -->
-<link href="{{ asset('users/css/version/tech.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/version/tech.css') }}" rel="stylesheet">
 
-<script src="{{ asset('users/js/share.js') }}"></script>
+<script src="{{ asset('frontend/js/share.js') }}"></script>
 
 
 </head>
@@ -53,7 +53,7 @@
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="{{ asset('users/images/version/tech-logo.png') }}" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="{{ asset('frontend/images/version/tech-logo.png') }}" alt=""></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
@@ -80,7 +80,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_01.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_01.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
@@ -96,7 +96,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_02.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_02.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
@@ -112,7 +112,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_03.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_03.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
@@ -128,7 +128,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_04.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_04.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
@@ -147,7 +147,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_05.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_05.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
@@ -163,7 +163,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_06.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_06.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
@@ -179,7 +179,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_07.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_07.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
@@ -195,7 +195,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_08.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_08.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
@@ -214,7 +214,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_09.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_09.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
@@ -230,7 +230,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_10.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_10.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
@@ -246,7 +246,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_11.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_11.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
@@ -262,7 +262,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_12.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_12.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
@@ -281,7 +281,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_13.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_13.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
@@ -297,7 +297,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_14.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_14.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
@@ -313,7 +313,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_15.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_15.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
@@ -329,7 +329,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_16.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_16.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
@@ -348,7 +348,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_17.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_17.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
@@ -364,7 +364,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_18.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_18.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
@@ -380,7 +380,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_19.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_19.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
@@ -396,7 +396,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('users/upload/tech_menu_20.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_20.jpg') }}" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
@@ -452,7 +452,7 @@
                     <div class="col-lg-7">
                         <div class="widget">
                             <div class="footer-text text-left">
-                                <a href="/"><img src="{{ asset('users/images/version/tech-footer-logo.png') }}" alt="" class="img-fluid"></a>
+                                <a href="/"><img src="{{ asset('frontend/images/version/tech-footer-logo.png') }}" alt="" class="img-fluid"></a>
                                 <p>Tech Blog is a technology blog, we sharing marketing, news and gadget articles.</p>
                                 <div class="social">
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -520,10 +520,10 @@
 
     <!-- Core JavaScript
     ================================================== -->
-    <script src="{{ asset('users/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('users/js/tether.min.js') }}"></script>
-    <script src="{{ asset('users/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('users/js/custom.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/tether.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/custom.js') }}"></script>
 
 
 </body>
