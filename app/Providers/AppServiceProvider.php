@@ -28,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         View::share('recent_posts', \App\Models\Post::orderBy('created_at', 'DESC')->limit('5')->get());
         View::share('popular_posts', \App\Models\Post::orderBy('views', 'DESC')->limit('5')->get());
+        View::share('random_posts', \App\Models\Post::inRandomOrder()->limit('2')->get());
     }
 }

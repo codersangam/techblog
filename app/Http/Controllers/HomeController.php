@@ -38,7 +38,7 @@ class HomeController extends Controller
         //     $post->incrementReadCount();
         // }
 
-        $post->incrementReadCount();
+
         // $posts = Post::whereSlug($post)->first();
 
         // $related_category_ids = $posts->categories()->pluck('categories.id');
@@ -51,8 +51,8 @@ class HomeController extends Controller
         //     ->take(2)
         //     ->get();
 
+        $post->incrementReadCount();
         $share = 'http://127.0.0.1:8000';
-
         return view('frontend.posts.singlepost', compact('post', 'share'));
     }
 
