@@ -27,16 +27,10 @@
                                 <small><a href="" title="">by {{$post->user->name}}</a></small>
                                 <small><a href="" title=""><i class="fa fa-eye"></i> {{ $post->views }}</a></small>
                             </div><!-- end meta -->
-
-                            <div class="post-sharing">
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{$share}}/post/uiouioi" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
-                                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                    <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div><!-- end post-sharing -->
-
                         </div><!-- end title -->
+
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
 
                         <div class="blog-content">
                             {!! htmlspecialchars_decode($post->body) !!}
@@ -49,17 +43,12 @@
                                 <small><a href="{{ route('tag', $tag->slug) }}" title="">{{ $tag->title }}</a></small>
                                 @endforeach
                             </div><!-- end meta -->
-
-                            <div class="post-sharing">
-                                <ul class="list-inline">
-                                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
-                                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                    <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div><!-- end post-sharing -->
                         </div><!-- end title -->
 
-                        <div class="row">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
+
+                        <div class="row pt-5">
                             <div class="col-lg-12">
                                 <div class="banner-spot clearfix">
                                     <div class="banner-img">
@@ -80,7 +69,7 @@
                                             <a href="{{ route('post', $post->previous->slug) }}" class="list-group-item list-group-item-action flex-column align-items-start">
                                                 <div class="w-100 justify-content-between text-right">
                                                     <img src="{{ Storage::disk('local')->url($post->previous->featuredimage) }}" alt="" class="img-fluid float-right">
-                                                    <h5 class="mb-1"></h5>
+                                                    <h5 class="mb-1">{{ $post->previous->title }}</h5>
                                                     <small>Prev Post</small>
                                                 </div>
                                             </a>
@@ -96,7 +85,7 @@
                                             <a href="{{ route('post', $post->next->slug) }}" class="list-group-item list-group-item-action flex-column align-items-start">
                                                 <div class="w-100 justify-content-between text-left">
                                                     <img src="{{ Storage::disk('local')->url($post->next->featuredimage) }}" alt="" class="img-fluid float-left">
-                                                    <h5 class="mb-1"></h5>
+                                                    <h5 class="mb-1">{{ $post->next->title }}</h5>
                                                     <small>Next Post</small>
                                                 </div>
                                             </a>
