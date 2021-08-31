@@ -27,16 +27,10 @@
                                 <small><a href="" title="">by {{$post->user->name}}</a></small>
                                 <small><a href="" title=""><i class="fa fa-eye"></i> {{ $post->views }}</a></small>
                             </div><!-- end meta -->
-
-                            <div class="post-sharing">
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{$share}}/post/uiouioi" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
-                                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                    <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div><!-- end post-sharing -->
-
                         </div><!-- end title -->
+
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
 
                         <div class="blog-content">
                             {!! htmlspecialchars_decode($post->body) !!}
@@ -49,21 +43,16 @@
                                 <small><a href="{{ route('tag', $tag->slug) }}" title="">{{ $tag->title }}</a></small>
                                 @endforeach
                             </div><!-- end meta -->
-
-                            <div class="post-sharing">
-                                <ul class="list-inline">
-                                    <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
-                                    <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                    <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div><!-- end post-sharing -->
                         </div><!-- end title -->
 
-                        <div class="row">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
+
+                        <div class="row pt-5">
                             <div class="col-lg-12">
                                 <div class="banner-spot clearfix">
                                     <div class="banner-img">
-                                        <img src="{{ asset('users/upload/banner_01.jpg') }}" alt="" class="img-fluid">
+                                        <img src="{{ asset('frontend/upload/banner_01.jpg') }}" alt="" class="img-fluid">
                                     </div><!-- end banner-img -->
                                 </div><!-- end banner -->
                             </div><!-- end col -->
@@ -112,15 +101,14 @@
                         <div class="custombox authorbox clearfix">
                             <h4 class="small-title">About author</h4>
                             <div class="row">
-                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
 
-                                    <img src="{{ Auth::user()->profile_photo_url }}" alt="" class="img-fluid rounded-circle">
+                                    <img src="{{ Storage::disk('local')->url($post->user->profile_photo_path) }}" alt="" class="img-fluid rounded-circle">
                                 </div><!-- end col -->
 
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <h4><a href="#">{{ Auth::user()->name }}</a></h4>
-                                    <p>{{ Auth::user()->about }}</p>
+                                    <h4><a href="#">{{ $post->user->name }}</a></h4>
+                                    <p>{{ $post->user->about }}</p>
 
                                     <div class="topsocial">
                                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -130,9 +118,7 @@
                                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
                                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Website"><i class="fa fa-link"></i></a>
                                     </div><!-- end social -->
-
                                 </div><!-- end col -->
-                                @endif
                             </div><!-- end row -->
                         </div><!-- end author-box -->
 
@@ -141,23 +127,31 @@
                         <div class="custombox clearfix">
                             <h4 class="small-title">You may also like</h4>
                             <div class="row">
+                                @if ($random_posts)
+                                @forelse ($random_posts as $random_post)
                                 <div class="col-lg-6">
                                     <div class="blog-box">
                                         <div class="post-media">
                                             <a href="tech-single.html" title="">
-                                                <img src="{{ asset('users/upload/tech_menu_04.jpg') }}" alt="" class="img-fluid">
+                                                <img src="{{ Storage::disk('local')->url($random_post->featuredimage) }}" alt="" class="img-fluid">
                                                 <div class="hovereffect">
                                                     <span class=""></span>
                                                 </div><!-- end hover -->
                                             </a>
                                         </div><!-- end media -->
                                         <div class="blog-meta">
-                                            <h4><a href="tech-single.html" title="">We are guests of ABC Design Studio</a></h4>
-                                            <small><a href="blog-category-01.html" title="">Trends</a></small>
-                                            <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
+                                            <h4><a href="tech-single.html" title="">{{ $random_post->title }}</a></h4>
+                                            @foreach ($random_post->categories as $category)
+                                            <small><a href="blog-category-01.html" title="">{{ $category->title }}</a></small>
+                                            @endforeach
+                                            <small><a href="" title="">{{ $random_post->created_at->diffForHumans() }}</a></small>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
                                 </div><!-- end col -->
+                                @empty
+                                <h3>No Posts Found!</h3>
+                                @endforelse
+                                @endif
                             </div><!-- end row -->
                         </div><!-- end custom-box -->
 
@@ -170,7 +164,7 @@
                                     <div class="comments-list">
                                         <div class="media">
                                             <a class="media-left" href="#">
-                                                <img src="{{ asset('users/upload/author.jpg') }}" alt="" class="rounded-circle">
+                                                <img src="{{ asset('frontend/upload/author.jpg') }}" alt="" class="rounded-circle">
                                             </a>
                                             <div class="media-body">
                                                 <h4 class="media-heading user_name">Amanda Martines <small>5 days ago</small></h4>
@@ -180,7 +174,7 @@
                                         </div>
                                         <div class="media">
                                             <a class="media-left" href="#">
-                                                <img src="{{ asset('users/upload/author_01.jpg') }}" alt="" class="rounded-circle">
+                                                <img src="{{ asset('frontend/upload/author_01.jpg') }}" alt="" class="rounded-circle">
                                             </a>
                                             <div class="media-body">
 
@@ -193,7 +187,7 @@
                                         </div>
                                         <div class="media last-child">
                                             <a class="media-left" href="#">
-                                                <img src="{{ asset('users/upload/author_02.jpg') }}" alt="" class="rounded-circle">
+                                                <img src="{{ asset('frontend/upload/author_02.jpg') }}" alt="" class="rounded-circle">
                                             </a>
                                             <div class="media-body">
 
@@ -232,7 +226,7 @@
                         <div class="widget">
                             <div class="banner-spot clearfix">
                                 <div class="banner-img">
-                                    <img src="{{ asset('users/upload/banner_101.jpg') }}"" alt="" class=" img-fluid">
+                                    <img src="{{ asset('frontend/upload/banner_101.jpg') }}"" alt="" class=" img-fluid">
                                 </div><!-- end banner-img -->
                             </div><!-- end banner -->
                         </div><!-- end widget -->
@@ -243,7 +237,7 @@
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="tech-single.html" title="">
-                                            <img src="{{ asset('users/upload/tech_video_01.jp') }}g" alt="" class="img-fluid">
+                                            <img src="{{ asset('frontend/upload/tech_video_01.jp') }}g" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span class="videohover"></span>
                                             </div><!-- end hover -->
@@ -259,7 +253,7 @@
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="tech-single.html" title="">
-                                            <img src="{{ asset('users/upload/tech_video_02.jp') }}g" alt="" class="img-fluid">
+                                            <img src="{{ asset('frontend/upload/tech_video_02.jp') }}g" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span class="videohover"></span>
                                             </div><!-- end hover -->
@@ -275,7 +269,7 @@
                                 <div class="blog-box">
                                     <div class="post-media">
                                         <a href="tech-single.html" title="">
-                                            <img src="{{ asset('users/upload/tech_video_03.jp') }}g" alt="" class="img-fluid">
+                                            <img src="{{ asset('frontend/upload/tech_video_03.jp') }}g" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span class="videohover"></span>
                                             </div><!-- end hover -->
@@ -339,7 +333,7 @@
                                 <div class="list-group">
                                     <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="{{ asset('users/upload/tech_blog_02.jpg') }}" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('frontend/upload/tech_blog_02.jpg') }}" alt="" class="img-fluid float-left">
                                             <h5 class="mb-1">Banana-chip chocolate cake recipe..</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -353,7 +347,7 @@
 
                                     <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="{{ asset('users/upload/tech_blog_03.jpg') }}" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('frontend/upload/tech_blog_03.jpg') }}" alt="" class="img-fluid float-left">
                                             <h5 class="mb-1">10 practical ways to choose organic..</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -367,7 +361,7 @@
 
                                     <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 last-item justify-content-between">
-                                            <img src="{{ asset('users/upload/tech_blog_07.jpg') }}" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('frontend/upload/tech_blog_07.jpg') }}" alt="" class="img-fluid float-left">
                                             <h5 class="mb-1">We are making homemade ravioli..</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -419,7 +413,7 @@
                         <div class="widget">
                             <div class="banner-spot clearfix">
                                 <div class="banner-img">
-                                    <img src="{{ asset('users/upload/banner_03.jpg') }}" alt="" class="img-fluid">
+                                    <img src="{{ asset('frontend/upload/banner_03.jpg') }}" alt="" class="img-fluid">
                                 </div><!-- end banner-img -->
                             </div><!-- end banner -->
                         </div><!-- end widget -->
