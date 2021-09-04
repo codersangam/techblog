@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SocialLinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +60,12 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function
     Route::get('/post/delete/{id}', [PostController::class, 'destroy']);
 });
 Route::post('editpost', [PostController::class, 'update'])->middleware(['auth:sanctum', 'verified']);
+
+// Social Links
+Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/sociallinks/list', [SocialLinkController::class, 'list']);
+    Route::post('/sociallinks/add', [SocialLinkController::class, 'add']);
+    Route::get('/sociallinks/edit/{id}', [SocialLinkController::class, 'edit']);
+    // Route::get('/post/delete/{id}', [SocialLinkController::class, 'destroy']);
+});
+Route::post('editlink', [SocialLinkController::class, 'update'])->middleware(['auth:sanctum', 'verified']);

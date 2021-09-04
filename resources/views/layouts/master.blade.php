@@ -257,6 +257,15 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="/admin/sociallinks/list" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Social Links
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <a href="route('logout')" onclick="event.preventDefault();

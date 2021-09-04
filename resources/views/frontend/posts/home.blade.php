@@ -19,15 +19,6 @@
                             </div>
                             <!-- end media -->
                             <div class="blog-meta big-meta text-center">
-                                <div class="post-sharing">
-                                    <ul class="list-inline">
-                                        <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share
-                                                    on Facebook</span></a></li>
-                                        <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet
-                                                    on Twitter</span></a></li>
-                                        <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div><!-- end post-sharing -->
                                 <h4><a href="{{ route('post',$post->slug ) }}" title="">{{ $post->title }}</a></h4>
                                 <p>{{ $post->slug }}</p>
                                 @foreach ($post->categories as $category)
@@ -115,16 +106,16 @@
                         </div><!-- end blog-list -->
                     </div><!-- end widget -->
 
-                    <div class="widget">
+                    <!-- <div class="widget">
                         <div class="banner-spot clearfix">
                             <div class="banner-img">
                                 <img src="upload/banner_07.jpg" alt="" class="img-fluid">
-                            </div><!-- end banner-img -->
-                        </div><!-- end banner -->
-                    </div><!-- end widget -->
+                            </div>
+                        </div>
+                    </div> -->
 
                     <!-- Recent Review -->
-                    <div class="widget">
+                    <!-- <div class="widget">
                         <h2 class="widget-title">Recent Reviews</h2>
                         <div class="blog-list-widget">
                             <div class="list-group">
@@ -170,18 +161,18 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><!-- end blog-list -->
-                    </div><!-- end widget -->
-
+                        </div>
+                    </div>
 
                     <div class="widget">
                         <div class="banner-spot clearfix">
                             <div class="banner-img">
                                 <img src="upload/banner_03.jpg" alt="" class="img-fluid">
-                            </div><!-- end banner-img -->
-                        </div><!-- end banner -->
-                    </div><!-- end widget -->
-                </div><!-- end sidebar -->
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
             </div><!-- end col -->
         </div>
     </div><!-- end container -->

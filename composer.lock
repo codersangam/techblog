@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e3bd1c6e5cc4d010268dd81c2a9c2f2",
+    "content-hash": "872192182167daa991c6fdddc5b9ea43",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1472,6 +1472,78 @@
             "time": "2021-03-02T16:53:12+00:00"
         },
         {
+            "name": "laravelcollective/html",
+            "version": "v6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/ae15b9c4bf918ec3a78f092b8555551dd693fde3",
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0",
+                "illuminate/session": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "illuminate/view": "^6.0|^7.0|^8.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "time": "2020-12-15T20:20:05+00:00"
+        },
+        {
             "name": "league/commonmark",
             "version": "1.6.6",
             "source": {
@@ -1793,6 +1865,74 @@
                 }
             ],
             "time": "2021-07-13T05:03:28+00:00"
+        },
+        {
+            "name": "martinbutt/laravel-adsense",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/martinbutt/laravel-adsense.git",
+                "reference": "f2e76d3c2160e02ec071ec896580d69c95a9bf54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/martinbutt/laravel-adsense/zipball/f2e76d3c2160e02ec071ec896580d69c95a9bf54",
+                "reference": "f2e76d3c2160e02ec071ec896580d69c95a9bf54",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/view": "^6.0||^7.0||^8.0",
+                "php": "^7.2||^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MartinButt\\Laravel\\Adsense\\Providers\\AdsenseServiceProvider"
+                    ],
+                    "aliases": {
+                        "Adsense": "MartinButt\\Laravel\\Adsense\\Facades\\AdsenseFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MartinButt\\Laravel\\Adsense\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Butt",
+                    "homepage": "https://www.martinbutt.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Crypto Technology srl",
+                    "email": "admin@cryptotech.srl",
+                    "homepage": "https://cryptotech.srl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Display Adsense ads easily in Laravel 6.x, 7.x and 8.x",
+            "keywords": [
+                "ads",
+                "adsense",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/martinbutt/laravel-adsense/issues",
+                "source": "https://github.com/martinbutt/laravel-adsense/"
+            },
+            "time": "2021-08-20T21:38:49+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
