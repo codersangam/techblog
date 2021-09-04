@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Cookie;
 use App\Models\Category;
+use App\Models\SocialLink;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 use App\Models\Tag;
@@ -37,19 +38,6 @@ class HomeController extends Controller
         //     Cookie::set('$post->id', '1', 60);
         //     $post->incrementReadCount();
         // }
-
-
-        // $posts = Post::whereSlug($post)->first();
-
-        // $related_category_ids = $posts->categories()->pluck('categories.id');
-
-        // // get the related post of the categories $related_category_ids
-        // $related_posts = Post::whereHas('categories', function ($q) use ($related_category_ids) {
-        //     $q->whereIn('category_id', $related_category_ids);
-        // })
-        //     ->where('id', '<>', $posts->id)
-        //     ->take(2)
-        //     ->get();
 
         $post->incrementReadCount();
         $share = 'http://127.0.0.1:8000';

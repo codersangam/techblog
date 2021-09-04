@@ -86,10 +86,10 @@
 
                             <div class="card card-default">
                                 <div class="card-header">
-                                    <h3 class="card-title">Featured Image</h3>
+                                    <h3 class="card-title">Featured Image (660*330)</h3>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <div class="input-group card-body">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="exampleInputFile" name="featuredimage">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>

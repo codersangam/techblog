@@ -41,6 +41,9 @@
 
 <script src="{{ asset('frontend/js/share.js') }}"></script>
 
+<!-- Adsense -->
+{!! Adsense::javascript() !!}
+
 
 </head>
 
@@ -528,7 +531,9 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6128b107d55a003e"></script>
 
-
+    <!--Facebook Commentst-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0&appId=385314449608573&autoLogAppEvents=1" nonce="VfHpyTTx"></script>
 </body>
 
 </html>
