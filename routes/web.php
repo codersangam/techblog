@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CountController;
 use App\Http\Controllers\SocialLinkController;
 
 /*
@@ -25,6 +26,8 @@ use App\Http\Controllers\SocialLinkController;
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/dashboard', [CountController::class, 'index'])->name('dashboard');
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/post/{post}', [HomeController::class, 'singlepost'])->name('post');
