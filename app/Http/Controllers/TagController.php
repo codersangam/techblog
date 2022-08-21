@@ -55,4 +55,9 @@ class TagController extends Controller
         $data->delete();
         return redirect('admin/tag/list');
     }
+
+    public function index()
+    {
+        return Tag::all();
+    }
 }

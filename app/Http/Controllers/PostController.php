@@ -105,4 +105,9 @@ class PostController extends Controller
         $data->delete();
         return redirect('admin/post/list');
     }
+
+    public function index()
+    {
+        return Post::all();
+    }
 }
