@@ -108,6 +108,7 @@ class PostController extends Controller
 
     public function index()
     {
-        return Post::all();
+        $data =  Post::all();
+        return $data;
     }
 }
