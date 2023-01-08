@@ -9,12 +9,13 @@ use App\Models\Tag;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class PostController extends Controller
 {
     public function list()
     {
-        $data = Post::all();
+        $data = Post::orderBy('created_at', 'DESC')->get();
         return view('admin.post.list', ['lists' => $data]);
     }
 
@@ -104,11 +105,5 @@ class PostController extends Controller
         $data = Post::find($id);
         $data->delete();
         return redirect('admin/post/list');
-    }
-
-    public function index()
-    {
-        $data =  Post::all();
-        return $data;
     }
 }

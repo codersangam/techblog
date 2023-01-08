@@ -55,9 +55,4 @@ class CategoryController extends Controller
         $data->delete();
         return redirect('admin/category/list');
     }
-
-    public function index()
-    {
-        return Category::all();
-    }
 }
