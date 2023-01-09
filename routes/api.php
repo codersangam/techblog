@@ -33,6 +33,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('add-tags', [TagController::class, 'addtags']);
+    Route::get('user-posts', [PostController::class, 'list']);
 });
 
 //Protecting Routes

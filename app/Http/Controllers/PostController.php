@@ -15,7 +15,8 @@ class PostController extends Controller
 {
     public function list()
     {
-        $data = Post::orderBy('created_at', 'DESC')->get();
+        $currentUser = Auth::user();
+        $data = Post::where('user_id', '=', $currentUser->id)->orderBy('created_at', 'DESC')->get();
         return view('admin.post.list', ['lists' => $data]);
     }
 
