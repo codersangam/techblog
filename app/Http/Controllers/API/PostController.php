@@ -22,7 +22,134 @@ class PostController extends Controller
     public function list()
     {
         $currentUser = Auth::user();
-        $data = Post::where('user_id', '=', $currentUser->id)->orderBy('created_at', 'DESC')->get();
-        return $data;
+        $result = Post::where('user_id', '=', $currentUser->id)->orderBy('created_at', 'DESC')->get();
+        $posts_count = $result->count();
+        if ($result) {
+            return response()->json([
+                "status" => 1,
+                "posts_count" => $posts_count,
+                "posts" => $result
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
+
+    public function addPosts(Request $request)
+    {
+        $rules = $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'body' => 'required|string',
+            'featuredimage' => 'required'
+        ]);
+
+        if ($request->hasFile('featuredimage')) {
+            $imageName = $request->featuredimage->store('public/featured-image');
+        }
+
+        $data = new Post();
+        $data->user_id = Auth::id();
+        $data->title = $rules['title'];
+        $data->slug = $rules['slug'];
+        $data->body = $rules['body'];
+        $data->status = $request->status;
+        $data->featuredimage = $imageName;
+        $result = $data->save();
+        $data->categories()->sync($request->categories);
+        $data->tags()->sync($request->tags);
+
+        if ($result) {
+            return response()->json([
+                "status" => 1,
+                "posts" => "Posts Added Successfully!!"
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
+
+    public function updatePosts(Request $request)
+    {
+        $rules = $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'body' => 'required|string',
+            'featuredimage' => 'required'
+        ]);
+
+        if ($request->hasFile('featuredimage')) {
+            $imageName = $request->featuredimage->store('public/featured-image');
+
+            $data = Post::find($request->id);
+            $data->user_id = Auth::id();
+            $data->title = $rules['title'];
+            $data->slug = $rules['slug'];
+            $data->body = $rules['body'];
+            $data->status = $request->status;
+            $data->featuredimage = $imageName;
+            $result = $data->save();
+            $data->categories()->sync($request->categories);
+            $data->tags()->sync($request->tags);
+
+
+            if ($result) {
+                return response()->json([
+                    "status" => 1,
+                    "posts" => "Posts Updated Successfully!!"
+                ]);
+            } else {
+                return response()->json([
+                    "status" => 0,
+                    "message" => "Operation Failed!!"
+                ]);
+            }
+        } else {
+            $data = Post::find($request->id);
+            $data->user_id = Auth::id();
+            $data->title = $rules['title'];
+            $data->slug = $rules['slug'];
+            $data->body = $rules['body'];
+            $data->status = $request->status;
+            $result = $data->save();
+            $data->categories()->sync($request->categories);
+            $data->tags()->sync($request->tags);
+
+            if ($result) {
+                return response()->json([
+                    "status" => 1,
+                    "posts" => "Posts Updated Successfully!!"
+                ]);
+            } else {
+                return response()->json([
+                    "status" => 0,
+                    "message" => "Operation Failed!!"
+                ]);
+            }
+        }
+    }
+
+    public function deletePosts($id)
+    {
+        $data = Post::find($id);
+        $result = $data->delete();
+
+        if ($result) {
+            return response()->json([
+                "status" => 1,
+                "message" => "Posts Deleted Successfully!!"
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
     }
 }

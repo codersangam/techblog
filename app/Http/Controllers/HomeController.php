@@ -40,8 +40,8 @@ class HomeController extends Controller
         // }
 
         $post->incrementReadCount();
-        $share = 'http://127.0.0.1:8000';
-        return view('frontend.posts.singlepost', compact('post', 'share'));
+        // $share = 'http://127.0.0.1:8000';
+        return view('frontend.posts.singlepost', compact('post'));
     }
 
     public function postByCategory(Category $category)

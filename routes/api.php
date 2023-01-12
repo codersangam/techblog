@@ -32,8 +32,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
-    Route::post('add-tags', [TagController::class, 'addtags']);
+    Route::post('add-tags', [TagController::class, 'addTags']);
+    Route::post('update-tags', [TagController::class, 'updateTags']);
+    Route::post('delete-tags/{id}', [TagController::class, 'deleteTags']);
+    Route::post('add-categories', [CategoryController::class, 'addCategories']);
+    Route::post('update-categories', [CategoryController::class, 'updateCategories']);
+    Route::post('delete-categories/{id}', [CategoryController::class, 'deleteCategories']);
     Route::get('user-posts', [PostController::class, 'list']);
+    Route::post('add-posts', [PostController::class, 'addPosts']);
+    Route::post('update-posts', [PostController::class, 'updatePosts']);
+    Route::post('delete-posts/{id}', [PostController::class, 'deletePosts']);
 });
 
 //Protecting Routes

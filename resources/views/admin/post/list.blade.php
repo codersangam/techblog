@@ -14,6 +14,7 @@
                             <th>Posted By</th>
                             <th>Title</th>
                             <th>Slug</th>
+                            <th>Status</th>
                             <th>Date</th>
                             <th>Action</th>
                         </tr>
@@ -26,6 +27,12 @@
                                 <td>{{ $list->user->name }}</td>
                                 <td>{{ $list['title'] }}</td>
                                 <td>{{ $list['slug'] }}</td>
+
+                                @if ($list->status == '1')
+                                    <td>Published</td>
+                                @else
+                                    <td>Not Published</td>
+                                @endif
                                 <td>{{ $list['updated_at'] }}</td>
                                 <td>
                                     <a class="btn btn-success" href="{{ '/admin/post/edit/' . $list['id'] }}">Edit</a>
