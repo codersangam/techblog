@@ -51,7 +51,6 @@ php artisan serve
 - Admin Panel Endpoint Urls (These Urls need tokens to get all data)
     - `/register` POST Request To register new users/admins
     - `/login` POST Request : To login users/admins
-    <br/>
     - `/add-tags` POST Request : To add new tags
     - `/update-tags` POST Request : To update tags
     - `/delete-tags/id` POST Request : To delete tags
