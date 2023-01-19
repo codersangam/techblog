@@ -14,7 +14,7 @@ class PostController extends Controller
     public function index()
     {
         $data = User::join('posts', 'posts.user_id', '=', 'users.id')
-            ->distinct()
+            ->orderBy('posts.created_at', 'DESC')
             ->get();
         return $data;
     }
@@ -52,7 +52,7 @@ class PostController extends Controller
         }
 
         $data = new Post();
-        $data->user_id = Auth::id();
+        $data->user_id = $request->user_id;
         $data->title = $rules['title'];
         $data->slug = $rules['slug'];
         $data->body = $rules['body'];
@@ -65,7 +65,7 @@ class PostController extends Controller
         if ($result) {
             return response()->json([
                 "status" => 1,
-                "posts" => "Posts Added Successfully!!"
+                "message" => "Posts Added Successfully!!"
             ]);
         } else {
             return response()->json([
