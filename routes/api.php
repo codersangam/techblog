@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\CountController;
 use App\Http\Controllers\API\TagController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::get('categories', [CategoryController::class, 'index']);
 Route::get('tags', [TagController::class, 'index']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
+Route::get('counts', [CountController::class, 'index']);
 
 
 // Secure/Token Routes
@@ -43,6 +45,7 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('update-posts', [PostController::class, 'updatePosts']);
     Route::post('delete-posts/{id}', [PostController::class, 'deletePosts']);
 });
+
 
 //Protecting Routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
