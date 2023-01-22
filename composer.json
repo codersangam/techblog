@@ -17,7 +17,8 @@
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.5",
-        "martinbutt/laravel-adsense": "^2.0"
+        "martinbutt/laravel-adsense": "^2.0",
+        "mtownsend/read-time": "^2.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
