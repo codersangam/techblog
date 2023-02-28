@@ -39,7 +39,7 @@ php artisan serve
 
 # APIs
 
-- Main Url: https://your-domain.com or http://localhost:8000
+- Main Url: https://your-domain.com/api or http://localhost:8000/api
 
 - Users Panel Endpoint Urls (These Urls doesnot need any tokens)
     - `/posts` GET Request : Fetch all posts
