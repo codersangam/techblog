@@ -15,6 +15,10 @@ class PostController extends Controller
     public function index()
     {
         $data = User::join('posts', 'posts.user_id', '=', 'users.id')
+            // ->join("category_posts", "category_posts.post_id", "=", "posts.id")
+            // ->join("categories", "categories.id", "=", "category_posts.category_id")
+            // ->join("post_tags", "post_tags.post_id", "=", "posts.id")
+            // ->join("tags", "tags.id", "=", "post_tags.tag_id")
             ->orderBy('posts.created_at', 'DESC')
             ->get();
         return $data;

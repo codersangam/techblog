@@ -26,6 +26,8 @@ Route::get('tags', [TagController::class, 'index']);
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::get('counts', [CountController::class, 'index']);
+Route::get('/category/{category}', [CategoryController::class, 'postByCategory'])->name('category');
+Route::get('/tag/{tag}', [TagController::class, 'postByTag'])->name('tag');
 
 
 // Secure/Token Routes

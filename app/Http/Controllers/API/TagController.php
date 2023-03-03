@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tag;
+use App\Models\User;
 
 class TagController extends Controller
 {
@@ -84,6 +85,23 @@ class TagController extends Controller
             return response()->json([
                 "status" => 1,
                 "message" => "Tags Deleted Successfully!!"
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
+
+    // API Functions
+    public function postByTag(Tag $tag)
+    {
+        $posts =  $tag->posts();
+        if ($posts) {
+            return response()->json([
+                "status" => 1,
+                "posts" => $posts,
             ]);
         } else {
             return response()->json([

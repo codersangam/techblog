@@ -92,4 +92,22 @@ class CategoryController extends Controller
             ]);
         }
     }
+
+
+    // Api Functions
+    public function postByCategory(Category $category)
+    {
+        $posts =  $category->posts();
+        if ($posts) {
+            return response()->json([
+                "status" => 1,
+                "posts" => $posts,
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
 }
