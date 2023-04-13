@@ -39,6 +39,7 @@ class PostController extends Controller
             return response()->json([
                 "status" => 1,
                 "posts_count" => $posts_count,
+                "user_details" => $currentUser,
                 "posts" => $result
             ]);
         } else {
