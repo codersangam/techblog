@@ -14,20 +14,26 @@ class PostController extends Controller
 {
     public function index()
     {
-        $data = User::join('posts', 'posts.user_id', '=', 'users.id')
+        $result = User::join('posts', 'posts.user_id', '=', 'users.id')
             // ->join("category_posts", "category_posts.post_id", "=", "posts.id")
             // ->join("categories", "categories.id", "=", "category_posts.category_id")
             // ->join("post_tags", "post_tags.post_id", "=", "posts.id")
             // ->join("tags", "tags.id", "=", "post_tags.tag_id")
             ->orderBy('posts.created_at', 'DESC')
             ->get();
-        return $data;
-    }
-
-    public function popular()
-    {
-        $data = User::join('posts', 'posts.user_id', '=', 'users.id')->orderBy('views', 'DESC')->limit('5')->get();
-        return $data;
+        $popular_posts = User::join('posts', 'posts.user_id', '=', 'users.id')->orderBy('views', 'DESC')->limit('5')->get();
+        if ($result) {
+            return response()->json([
+                "status" => 1,
+                "all_posts" => $result,
+                "popular_posts" => $popular_posts,
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
     }
 
     public function list()
