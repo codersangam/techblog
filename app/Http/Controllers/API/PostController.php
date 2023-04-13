@@ -24,6 +24,12 @@ class PostController extends Controller
         return $data;
     }
 
+    public function popular()
+    {
+        $data = User::join('posts', 'posts.user_id', '=', 'users.id')->orderBy('views', 'DESC')->limit('5')->get();
+        return $data;
+    }
+
     public function list()
     {
         $currentUser = Auth::user();
