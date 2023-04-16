@@ -43,15 +43,100 @@ php artisan serve
 
 - Users Panel Endpoint Urls (These Urls doesnot need any tokens)
     - `/posts` GET Request : Fetch all posts
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/posts        |            {
+                                               |                 "status" : 1,
+                                               |                  "all_posts" : [...],
+                                               |                  "popular_posts" : [...],
+                                               |            }
+
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+    
     - `/tags` GET Request : Fetch all tags
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/tags         |            {
+                                               |                 "status" : 1,
+                                               |                  "tags_count" : 10,
+                                               |                  "tags" : [...],
+                                               |            }
+
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+
     - `/categories` GET Request : Fetch all categories
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/categories   |            {
+                                               |                 "status" : 1,
+                                               |                  "categories_count" : 10,
+                                               |                  "categories" : [...],
+                                               |            }
+
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+
     - `/counts` GET Request : Fetch total counts of users, posts, tags and categories.
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/counts       |            {
+                                               |                 "status" : 1,
+                                               |                  "total_tags_count" : 10,
+                                               |                  "total_categories_count" : 10,
+                                               |                  "total_posts_count : 10,
+                                               |                  "total_users_count : 10,
+                                               |            }
+
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
 
 <br/>
 
 - Admin Panel Endpoint Urls (These Urls need tokens to get all data)
+
     - `/register` POST Request To register new users/admins
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/register     |            {
+                                               |                 "data" : {
+                                               |                                "name": "test user",
+                                               |                                 "email": "testuser1@gmail.com",
+                BODY                           |                                 "updated_at": "2023-04-16T18:38:49.000000Z",
+            {                                  |                                 "created_at": "2023-04-16T18:38:49.000000Z",
+                "name":"test user",            |                                 "id": 8,
+                "email":"testuser1@gmail.com", |                                 "profile_photo_url": ""
+                 "password":"12345678"         |                            },
+            }                                  |                             "access_token": "",
+                                               |                             "token_type": "Bearer"
+                                               |              }     
+                                               |           
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+
+    
     - `/login` POST Request : To login users/admins
+
+    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
+
+                   REQUEST                     |            RESPONSE
+        http://localhost:8000/api/login        |            {
+                                               |                 "message": "",
+                                               |                 "access_token": "",              
+                                               |                 "token_type":"Bearer"               
+                BODY                           |             }                  
+            {                                  |                                 
+                "email":"testuser1@gmail.com", |                                
+                "password":"12345678"          |                    
+            }                                  |                                   
+    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+
     - `/add-tags` POST Request : To add new tags
     - `/update-tags` POST Request : To update tags
     - `/delete-tags/id` POST Request : To delete tags
