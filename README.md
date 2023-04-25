@@ -1,3 +1,8 @@
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fcodersangam%2Ftechblog&label=REPO%20VISITORS&countColor=%23ff8a65&labelStyle=upper)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fcodersangam%2Ftechblog)
+![](https://img.shields.io/badge/-laravel-grey?style=for-the-badge&logo=laravel)
+![](https://badgen.net/github/stars/codersangam/techblog)
+![](https://badgen.net/github/forks/codersangam/techblog)
+
 # Installation
 
 ### Download zip file or directly open terminal and type
