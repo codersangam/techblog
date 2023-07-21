@@ -152,3 +152,6 @@ php artisan serve
     - `/add-posts` POST Request : To add new posts
     - `/update-posts` POST Request : To update posts
     - `/delete-posts/id` POST Request : To delete posts
+
+# Support
+<a href="https://www.buymeacoffee.com/codersangam" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
