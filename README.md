@@ -47,6 +47,8 @@ php artisan serve
 - Main Url: https://your-domain.com/api or http://localhost:8000/api
 
 - Users Panel Endpoint Urls (These Urls doesnot need any tokens)
+    <br>
+    <br>
     - `/posts` GET Request : Fetch all posts
 
     '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
@@ -101,10 +103,6 @@ php artisan serve
 
     '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
 
-<br/>
-
-- Admin Panel Endpoint Urls (These Urls need tokens to get all data)
-
     - `/register` POST Request To register new users/admins
 
     '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
@@ -141,6 +139,11 @@ php artisan serve
                 "password":"12345678"          |                    
             }                                  |                                   
     '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
+
+<br/>
+<br/>
+
+- Admin Panel Endpoint Urls (These Urls need tokens to get all data)
 
     - `/add-tags` POST Request : To add new tags
     - `/update-tags` POST Request : To update tags

@@ -53,27 +53,37 @@
         <header class="tech-header header">
             <div class="container-fluid">
                 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="{{ asset('frontend/images/version/tech-logo.png') }}" alt=""></a>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav mr-auto">
+                    <a class="navbar-brand" href="/"><img src="{{ asset('frontend/images/version/tech-logo.png') }}"
+                            alt=""></a>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Home</a>
                             </li>
-                            <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                            <li
+                                class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">News</a>
                                 <ul class="dropdown-menu megamenu" aria-labelledby="dropdown01">
                                     <li>
                                         <div class="container">
                                             <div class="mega-menu-content clearfix">
                                                 <div class="tab">
-                                                    <button class="tablinks active" onclick="openCategory(event, 'cat01')">Science</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat02')">Technology</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat03')">Social Media</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat04')">Car News</button>
-                                                    <button class="tablinks" onclick="openCategory(event, 'cat05')">Worldwide</button>
+                                                    <button class="tablinks active"
+                                                        onclick="openCategory(event, 'cat01')">Science</button>
+                                                    <button class="tablinks"
+                                                        onclick="openCategory(event, 'cat02')">Technology</button>
+                                                    <button class="tablinks"
+                                                        onclick="openCategory(event, 'cat03')">Social Media</button>
+                                                    <button class="tablinks" onclick="openCategory(event, 'cat04')">Car
+                                                        News</button>
+                                                    <button class="tablinks"
+                                                        onclick="openCategory(event, 'cat05')">Worldwide</button>
                                                 </div>
 
                                                 <div class="tab-details clearfix">
@@ -83,14 +93,16 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_01.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_01.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Top 10+ care advice for your toenails</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Top 10+
+                                                                                care advice for your toenails</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -99,14 +111,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_02.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_02.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">The secret of your beauty is handmade soap</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">The
+                                                                                secret of your beauty is handmade
+                                                                                soap</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -115,14 +130,16 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_03.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_03.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Benefits of face mask made from mud</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Benefits
+                                                                                of face mask made from mud</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -131,14 +148,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_04.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_04.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Science</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Relax with the unique warmth of candle flavor</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Relax
+                                                                                with the unique warmth of candle
+                                                                                flavor</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -150,14 +170,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_05.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_05.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">2017 summer stamp will have design models here</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">2017
+                                                                                summer stamp will have design models
+                                                                                here</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -166,14 +189,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_06.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_06.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Which color is the most suitable color for you?</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Which
+                                                                                color is the most suitable color for
+                                                                                you?</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -182,14 +208,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_07.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_07.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Subscribe to these sites to keep an eye on the fashion</a></h4>
+                                                                        <h4><a href="tech-single.html"
+                                                                                title="">Subscribe to these sites to
+                                                                                keep an eye on the fashion</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -198,14 +227,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_08.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_08.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Technology</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">The most trends of this year with color combination</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">The most
+                                                                                trends of this year with color
+                                                                                combination</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -217,14 +249,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_09.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_09.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">I visited the architects of Istanbul for you</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">I
+                                                                                visited the architects of Istanbul for
+                                                                                you</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -233,14 +268,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_10.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_10.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Prepared handmade dish dish in the Netherlands</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Prepared
+                                                                                handmade dish dish in the
+                                                                                Netherlands</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -249,14 +287,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_11.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_11.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">I recommend you visit the fairy chimneys</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">I
+                                                                                recommend you visit the fairy
+                                                                                chimneys</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -265,14 +306,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_12.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_12.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Social Media</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">One of the most beautiful ports in the world</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">One of
+                                                                                the most beautiful ports in the
+                                                                                world</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -284,14 +328,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_13.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_13.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">A collection of the most beautiful shop designs</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">A
+                                                                                collection of the most beautiful shop
+                                                                                designs</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -300,14 +347,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_14.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_14.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">America's and Canada's most beautiful wine houses</a></h4>
+                                                                        <h4><a href="tech-single.html"
+                                                                                title="">America's and Canada's most
+                                                                                beautiful wine houses</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -316,14 +366,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_15.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_15.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">The most professional ways to color your walls</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">The most
+                                                                                professional ways to color your
+                                                                                walls</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -332,14 +385,16 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_16.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_16.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Car News</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Stylish cabinet designs and furnitures</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Stylish
+                                                                                cabinet designs and furnitures</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -351,14 +406,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_17.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_17.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Grilled vegetable with fish prepared with fish</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Grilled
+                                                                                vegetable with fish prepared with
+                                                                                fish</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -367,14 +425,17 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_18.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_18.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">The world's finest and clean meat restaurants</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">The
+                                                                                world's finest and clean meat
+                                                                                restaurants</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -383,14 +444,16 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_19.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_19.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Fried veal and vegetable dish</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Fried
+                                                                                veal and vegetable dish</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -399,14 +462,16 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="tech-single.html" title="">
-                                                                            <img src="{{ asset('frontend/upload/tech_menu_20.jpg') }}" alt="" class="img-fluid">
+                                                                            <img src="{{ asset('frontend/upload/tech_menu_20.jpg') }}"
+                                                                                alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div><!-- end hover -->
                                                                             <span class="menucat">Worldwide</span>
                                                                         </a>
                                                                     </div><!-- end media -->
                                                                     <div class="blog-meta">
-                                                                        <h4><a href="tech-single.html" title="">Tasty pasta sauces and recipes</a></h4>
+                                                                        <h4><a href="tech-single.html" title="">Tasty
+                                                                                pasta sauces and recipes</a></h4>
                                                                     </div><!-- end meta -->
                                                                 </div><!-- end blog-box -->
                                                             </div>
@@ -430,8 +495,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="tech-contact.html">Contact Us</a>
                             </li>
+
                         </ul>
-                        <!-- <ul class="navbar-nav mr-2">
+                        <ul class="navbar-nav mr-2">
+                            <li class="nav-item">
+                                <a class="btn btn-primary btn-sm" href="login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-primary btn-sm" href="register">Register</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-rss"></i></a>
                             </li>
@@ -441,7 +513,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
                 </nav>
             </div><!-- end container-fluid -->
@@ -455,14 +527,20 @@
                     <div class="col-lg-7">
                         <div class="widget">
                             <div class="footer-text text-left">
-                                <a href="/"><img src="{{ asset('frontend/images/version/tech-footer-logo.png') }}" alt="" class="img-fluid"></a>
+                                <a href="/"><img src="{{ asset('frontend/images/version/tech-footer-logo.png') }}"
+                                        alt="" class="img-fluid"></a>
                                 <p>Tech Blog is a technology blog, we sharing marketing, news and gadget articles.</p>
                                 <div class="social">
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                                            class="fa fa-twitter"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
+                                            class="fa fa-google-plus"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                                            class="fa fa-pinterest"></i></a>
                                 </div>
 
                                 <hr class="invis">
@@ -511,7 +589,8 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <br>
-                        <div class="copyright">&copy; All Rights Reserved. Crafted by <a href="https://codersangam.com">Coder Sangam</a></div>
+                        <div class="copyright">&copy; All Rights Reserved. Crafted by <a
+                                href="https://codersangam.com">Coder Sangam</a></div>
                     </div>
                 </div>
             </div><!-- end container -->
@@ -533,7 +612,9 @@
 
     <!--Facebook Commentst-->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0&appId=385314449608573&autoLogAppEvents=1" nonce="VfHpyTTx"></script>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0&appId=385314449608573&autoLogAppEvents=1"
+        nonce="VfHpyTTx"></script>
 </body>
 
 </html>
