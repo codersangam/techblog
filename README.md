@@ -41,6 +41,9 @@ php artisan storage:link
 php artisan serve
 ```
 
+# Support
+<a href="https://www.buymeacoffee.com/codersangam" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 
 # APIs
 
@@ -52,100 +55,16 @@ php artisan serve
     <br>
     <br>
     - `/posts` GET Request : Fetch all posts
-
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/posts        |            {
-                                               |                 "status" : 1,
-                                               |                  "all_posts" : [...],
-                                               |                  "popular_posts" : [...],
-                                               |            }
-
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-    
     - `/tags` GET Request : Fetch all tags
-
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/tags         |            {
-                                               |                 "status" : 1,
-                                               |                  "tags_count" : 10,
-                                               |                  "tags" : [...],
-                                               |            }
-
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-
     - `/categories` GET Request : Fetch all categories
-
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/categories   |            {
-                                               |                 "status" : 1,
-                                               |                  "categories_count" : 10,
-                                               |                  "categories" : [...],
-                                               |            }
-
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-
     - `/counts` GET Request : Fetch total counts of users, posts, tags and categories.
-
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/counts       |            {
-                                               |                 "status" : 1,
-                                               |                  "total_tags_count" : 10,
-                                               |                  "total_categories_count" : 10,
-                                               |                  "total_posts_count : 10,
-                                               |                  "total_users_count : 10,
-                                               |            }
-
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-
     - `/register` POST Request To register new users/admins
-
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/register     |            {
-                                               |                 "data" : {
-                                               |                                "name": "test user",
-                                               |                                 "email": "testuser1@gmail.com",
-                BODY                           |                                 "updated_at": "2023-04-16T18:38:49.000000Z",
-            {                                  |                                 "created_at": "2023-04-16T18:38:49.000000Z",
-                "name":"test user",            |                                 "id": 8,
-                "email":"testuser1@gmail.com", |                                 "profile_photo_url": ""
-                 "password":"12345678"         |                            },
-            }                                  |                             "access_token": "",
-                                               |                             "token_type": "Bearer"
-                                               |              }     
-                                               |           
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-
-    
     - `/login` POST Request : To login users/admins
 
-    '👇🏻┌------------------------------------------------------------------------------👨🏻‍💻'
-
-                   REQUEST                     |            RESPONSE
-        http://localhost:8000/api/login        |            {
-                                               |                 "message": "",
-                                               |                 "access_token": "",              
-                                               |                 "token_type":"Bearer"               
-                BODY                           |             }                  
-            {                                  |                                 
-                "email":"testuser1@gmail.com", |                                
-                "password":"12345678"          |                    
-            }                                  |                                   
-    '👆🏻└------------------------------------------------------------------------------👨🏻‍💻'
-
 <br/>
 <br/>
 
-- Admin Panel Endpoint Urls (These Urls need tokens to get all data)
+- Admin Panel Endpoint Urls (These Urls need tokens to create/post/update/delete data)
 
     - `/add-tags` POST Request : To add new tags
     - `/update-tags` POST Request : To update tags
@@ -158,6 +77,3 @@ php artisan serve
     - `/update-posts` POST Request : To update posts
     - `/delete-posts/id` POST Request : To delete posts
     - `/logout` POST Request : To logout current user.
-
-# Support
-<a href="https://www.buymeacoffee.com/codersangam" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
