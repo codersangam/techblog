@@ -44,6 +44,8 @@ php artisan serve
 
 # APIs
 
+## New API Docs: https://app.theneo.io/purple-tech/techblog-api
+
 - Main Url: https://your-domain.com/api or http://localhost:8000/api
 
 - Users Panel Endpoint Urls (These Urls doesnot need any tokens)
