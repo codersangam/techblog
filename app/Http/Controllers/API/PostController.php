@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Mtownsend\ReadTime\ReadTime;
 
 class PostController extends Controller
@@ -15,13 +17,22 @@ class PostController extends Controller
     public function index()
     {
         $result = User::join('posts', 'posts.user_id', '=', 'users.id')
-            // ->join("category_posts", "category_posts.post_id", "=", "posts.id")
-            // ->join("categories", "categories.id", "=", "category_posts.category_id")
-            // ->join("post_tags", "post_tags.post_id", "=", "posts.id")
-            // ->join("tags", "tags.id", "=", "post_tags.tag_id")
             ->orderBy('posts.created_at', 'DESC')
             ->get();
         $popular_posts = User::join('posts', 'posts.user_id', '=', 'users.id')->orderBy('views', 'DESC')->limit('5')->get();
+
+        $result->each(function ($item) {
+            if ($item->featuredimage) {
+                $item->featuredimage =  env('APP_URL') . Storage::url($item->featuredimage);
+            }
+        });
+
+        $popular_posts->each(function ($item) {
+            if ($item->featuredimage) {
+                $item->featuredimage =  env('APP_URL') . Storage::url($item->featuredimage);
+            }
+        });
+
         if ($result) {
             return response()->json([
                 "status" => 1,
