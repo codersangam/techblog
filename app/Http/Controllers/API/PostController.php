@@ -181,4 +181,37 @@ class PostController extends Controller
             ]);
         }
     }
+
+    public function postsWithPagination()
+    {
+        $result = User::join('posts', 'posts.user_id', '=', 'users.id')
+            ->orderBy('posts.created_at', 'DESC')
+            ->paginate(10);
+        $popular_posts = User::join('posts', 'posts.user_id', '=', 'users.id')->orderBy('views', 'DESC')->limit('5')->get();
+
+        $result->each(function ($item) {
+            if ($item->featuredimage) {
+                $item->featuredimage =  env('APP_URL') . Storage::url($item->featuredimage);
+            }
+        });
+
+        $popular_posts->each(function ($item) {
+            if ($item->featuredimage) {
+                $item->featuredimage =  env('APP_URL') . Storage::url($item->featuredimage);
+            }
+        });
+
+        if ($result) {
+            return response()->json([
+                "status" => 1,
+                "all_posts" => $result,
+                "popular_posts" => $popular_posts,
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
 }

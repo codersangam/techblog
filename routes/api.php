@@ -21,7 +21,7 @@ use App\Http\Controllers\API\PostController;
 
 // Normal Routes
 Route::get('posts', [PostController::class, 'index']);
-Route::get('popular-posts', [PostController::class, 'popular']);
+Route::get('posts-with-pagination', [PostController::class, 'postsWithPagination']);
 Route::get('categories', [CategoryController::class, 'index']);
 Route::get('tags', [TagController::class, 'index']);
 Route::post('register', [AuthController::class, 'register']);
