@@ -190,7 +190,7 @@ class PostController extends Controller
         if ($data) {
             return response()->json([
                 "status" => 1,
-                "message" => $data,
+                "post" => $data,
             ]);
         } else {
             return response()->json([
