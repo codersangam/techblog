@@ -176,7 +176,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
-        MartinButt\Laravel\Adsense\Providers\AdsenseServiceProvider::class,
 
     ],
 
@@ -231,8 +230,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Input' => Illuminate\Support\Facades\Input::class,
-        'Adsense' => MartinButt\Laravel\Adsense\Facades\AdsenseFacade::class,
 
     ],
 

@@ -170,4 +170,21 @@ class PostController extends Controller
             ]);
         }
     }
+
+    public function postDetails($id)
+    {
+        $data = Post::find($id);
+
+        if ($data) {
+            return response()->json([
+                "status" => 1,
+                "message" => $data,
+            ]);
+        } else {
+            return response()->json([
+                "status" => 0,
+                "message" => "Operation Failed!!"
+            ]);
+        }
+    }
 }
